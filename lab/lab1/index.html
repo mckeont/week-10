@@ -7,28 +7,48 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/leaflet.css" />
     <!-- Choose a frontend framework CSS file: -->
-    <!-- <link rel="stylesheet" href="css/bootstrap.css" /> -->
+    <link rel="stylesheet" href="css/bootstrap.css" />
     <!-- <link rel="stylesheet" href="css/material.css" /> -->
     <!-- <link rel="stylesheet" href="css/assembly.css" /> -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <!-- Sidebar -->
+    <div class= "row">
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span2">
     <div class="sidebar">
       <nav class="navbar navbar-default">
         <div class="container-fluid clearfix">
           <div class="topright-button" style="float: right">
-            [Add New]
+            <!-- NEW -->
+            <div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    Dropdown
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+<!-- NEW -->
           </div>
           <div class="navbar-header">
-            <a href="#">Manufacturers</a>
+            <a href="#"><b>Manufacturers<b></a>
           </div>
         </div>
       </nav>
+
       <div class="item">
         <h2 class="item-heading">Tandy’s Basketweavers</h2>
         <div>490 Freedom Drive<br>
         Philadelphia, PA 19425</div>
+        <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Low Inventory</button>
       </div>
       <div class="item">
         <h2 class="item-heading">Basket Case</h2>
@@ -54,13 +74,112 @@
         Sort by <span class="sort-option selected">A–Z</span> <span class="sort-option">Inventory</span>
       </div>
     </div>
+  </div>
+  </div>
+  </div>
+  <div class="span10">
+    <div>
+      <div class="row">
+          <div class="sidebar2">
+            <div>
+        <center>
+   <a href="#" data-toggle="tooltip" title="Hooray!">Basket Tooltip
+   <img src="images/basket.png" class="img-responsive" alt="basket."></a>
+        </center>
+              <button class="btn-group-xs btn-group-justified"><span class="glyphicon-map-marker"></span> Manufacturers </button>
+              <button class="btn-group-xs btn-group-justified" id="target2">Purchases</button>
+              <button class="btn-group-xs btn-group-justified" id="target3">Basket Secrets</button>
+              <button class="btn-group-xs btn-primary btn-group-justified"><i class="fa fa-thumbs-up">Like</i></button>
+
+            </div>
+
+            <!-- Modal -->
+            <div id="myModal" class="modal fade" role="dialog">
+              <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Manufacturer</h4>
+                  </div>
+                  <div class="modal-body" style="background-color:red">
+                    <p style="color:white">This Manufacturer has low inventory.</p>
+                  </div>
+                  <div class="row">
+                    <h2 style="padding-left:20px"> Tandy's BasketWeavers</h2>
+                    <div style="padding-left: 400px">
+                       <button class="col-sm offset-sm-4">
+                         edit
+                       </button>
+                       <button class="col-sm offset-sm-4">
+                         delete
+                      </button>
+                      <button class="col-sm offset-sm-4">
+                        export
+                      </button>
+                    </div>
+              </div>
+              <br>
+              <div class="row" style="padding-left:20px">
+                  <div class="col-sm-3">Address</div>
+                  <div class="col-sm-6">Contact</div>
+                  <div class="col-sm-3" style="color:blue"> 324</div>
+              </div>
+              <div class="row" style="padding-left:20px">
+                    <div class="col-sm-3">123 HandSpider Street</div>
+                    <div class="col-sm-6">handspider@shapefiles.net</div>
+                    <div class="col-sm-3"> Baskets sold</div>
+                </div>
+                <div class="modal-footer row">
+                  <div class="col-sm-8" align="left">SALES</div>
+                </div>
+
+                <div class="row" style="padding-left:70px">
+                      <div class="col-sm-3" style="color:green"><b>First Name</b></div>
+                      <div class="col-sm-4" style="color:green"><b>Last Name</b></div>
+                      <div class="col-sm-3" style="color:green"><b>Purchase</b></div>
+                  </div>
+
+            <div class="modal-footer row">
+                <div class="row">
+                      <div class="col-sm-3">Mark</div>
+                      <div class="col-sm-4">Otto</div>
+                      <div class="col-sm-3">Fruit Basket</div>
+                  </div>
+            </div>
+            <div class="modal-footer row">
+                <div class="row">
+                      <div class="col-sm-3">Jacob</div>
+                      <div class="col-sm-4">Thornton</div>
+                      <div class="col-sm-3">Gift Basket</div>
+                  </div>
+            </div>
+            <div class="modal-footer row">
+                <div class="row">
+                      <div class="col-sm-3">Larry</div>
+                      <div class="col-sm-4">the Bird</div>
+                      <div class="col-sm-3">Easter Basket</div>
+                  </div>
+            </div>
+
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
     <!-- Map -->
     <div id="map" class="map"></div>
     <!-- Javascript Imports -->
     <script src="js/jquery-2.2.0.js"></script>
     <script src="js/leaflet.js"></script>
     <!-- Choose a frontend framework Javascript file: -->
-    <!-- <script src="js/bootstrap.js"></script> -->
+    <script src="js/bootstrap.js"></script>
     <!-- <script src="js/material.js"></script> -->
     <!-- <script src="js/assembly.js"></script>  -->
     <script src="js/setup.js"></script>

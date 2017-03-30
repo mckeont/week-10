@@ -11,3 +11,5 @@ var Stamen_TonerLite = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{
   ext: 'png'
 }).addTo(map);
 
+
+alert("Welcome to my Bootstrap practice page, sorry about the annoying alert, Click on low inventory");

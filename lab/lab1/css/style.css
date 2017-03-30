@@ -7,20 +7,52 @@ body {
 .map {
     position: absolute;
     right: 0px;
-    left: 340px;
+    left: 480px;
     height: 100%;
     top: 0;
 }
 
 .sidebar {
     position: absolute;
-    left: 0px;
-    width: 340px;
+    left: 150px;
+    width: 330px;
+    height: 100%;
     top: 0;
     bottom: 0;
     overflow-y: auto;
     padding: 20px;
     padding-bottom: 60px;
+    border-style: solid;
+    border-color: black;
+}
+
+.sidebar2 {
+    position: absolute;
+    left: 0px;
+    width: 150px;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+    padding: 20px;
+    padding-bottom: 60px;
+    border-style: solid;
+    border-color: darkblue;
+    border-width: medium;
+    background-color: lightgrey;
+}
+
+
+.well{
+  width: 100%;
+  height: 100%;
+}
+
+.dropdown{
+  left: -25px;
+}
+
+.dropdown-menu{
+  left:-25px;
 }
 
 .item {
@@ -33,18 +65,17 @@ body {
 }
 
 .item-heading {
-    font-size: 18px;
+    font-size: 12px;
     margin-top: 0;
     font-weight: bold;
 }
 
 .sort {
-    position: fixed;
+    position: absolute;
     bottom: 0;
-    left: 0;
-    width: 340px;
-    background-color: #fff;
-    padding: 20px;
+    left: 100;
+    width: 240px;
+    padding-bottom: 1px;
 }
 
 .sort-option {
